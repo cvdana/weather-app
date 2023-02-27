@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App 1</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="info">
+        <h1 id="city"></h1>
+        <h2 id="current-time"></h2>
+        <h3>
+          <span id="actual-temperature"></span>
+          <span id="units"> ºC </span>
+        </h3>
+      </div>
+      <div class="weather">
+        <div class="border border-4 rounded-top-circle box">
+          <h4 id="condition"></h4>
+          <h4 id="temperatures"></h4>
+          <br />
+          <br />
+          <h4 id="humidity"></h4>
+          <h4 id="wind"></h4>
+          <img class="dog" src="images/dog.gif" alt="sleeping dog" />
+        </div>
+        <hr />
+        <div class="row">
+          <div class="border border-3 rounded-pill col one">
+            <h5>
+              Thu, 26 <br /><img
+                src="images/cloudy.svg"
+                alt="cloud"
+                class="icon"
+              /><br />12º/2º
+            </h5>
+          </div>
+          <div class="border border-3 rounded-pill col two">
+            <h5>
+              Fri, 26 <br /><img
+                src="images/sunny.svg"
+                alt="sun"
+                class="icon"
+              /><br />
+              12º/2º
+            </h5>
+          </div>
+          <div class="border border-3 rounded-pill col three">
+            <h5>
+              Sat, 28 <br /><img
+                src="images/partly cloudy.svg"
+                alt="cloud with sun"
+                class="icon"
+              /><br />12º/2º
+            </h5>
+          </div>
+          <div class="border border-3 rounded-pill col four">
+            <h5>
+              Sun, 29 <br /><img
+                src="images/rainy.svg"
+                alt="cloud with rain and thunder"
+                class="icon"
+              /><br />11º/2º
+            </h5>
+          </div>
+          <div class="border border-3 rounded-pill col five">
+            <h5>
+              Mon, 30 <br /><img
+                src="images/snowy.svg"
+                alt="cloud"
+                class="icon"
+              /><br />15º/3º
+            </h5>
+          </div>
+          <div class="border border-3 rounded-pill col six">
+            <h5>
+              Tue, 31 <br /><img
+                src="images/sunny.svg"
+                alt="sun"
+                class="icon"
+              /><br />15º/4º
+            </h5>
+          </div>
+          <div class="border border-3 rounded-pill col seven">
+            <h5>
+              Wed, 1 <br /><img
+                src="images/sunny.svg"
+                alt="sun"
+                class="icon"
+              /><br />16º/5º
+            </h5>
+          </div>
+        </div>
+      </div>
+      <form action="submit" id="search-form">
+        <div
+          class="p-1 bg-light rounded rounded-pill shadow-sm mb-1 search-box"
+        >
+          <div class="input-group">
+            <input
+              type="search"
+              placeholder="Search City"
+              aria-describedby="button-addon1"
+              class="form-control border-0 bg-ligh search-bar"
+              id="search-city"
+            />
+            <div class="input-group-append">
+              <button
+                id="button-addon1"
+                type="submit"
+                class="btn btn-link text-primary search-button"
+              >
+                <img src="images/search.svg" alt="magnifying glass" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <img
+          class="location col"
+          id="location-drop"
+          src="images/location.png"
+          alt="location pin"
+        />
+      </form>
+    </div>
+    <script src="src/javascript.js"></script>
+  </body>
+</html>
