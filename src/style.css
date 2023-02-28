@@ -19,14 +19,6 @@
 h3 {
   font-size: 33px;
 }
-a {
-  text-decoration: none;
-  color: #fff;
-  transition: all 200ms ease-in;
-}
-a:hover {
-  color: #0f5e9a;
-}
 
 h4 {
   font-family: "Lora", serif;
