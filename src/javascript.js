@@ -40,7 +40,7 @@ function showTemperature(response) {
     response.data.wind.speed
   )} Km/h`;
   document.querySelector(`#condition`).innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector(`#city`).innerHTML = response.data.name;
 }
 function search(city) {
