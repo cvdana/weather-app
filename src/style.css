@@ -1,6 +1,9 @@
-.container {
+.wrap {
   max-width: 800px;
   max-height: 700px;
+  margin: 20px auto;
+}
+.weather-app {
   background: radial-gradient(
     circle at -8.9% 51.2%,
     rgb(255, 124, 0) 0%,
@@ -14,7 +17,7 @@
 .info {
   font-family: "Lora", serif;
   color: #fff;
-  padding: 10px;
+  padding: 10px 15px;
 }
 h3 {
   font-size: 33px;
@@ -67,10 +70,13 @@ img.dog {
   bottom: -45px;
   right: 50px;
 }
-.row .rounded-pill {
-  width: 40px;
-  height: 130px;
+.row {
   box-sizing: content-box;
+  width: 100%;
+  margin: 0 auto;
+}
+.row .rounded-pill {
+  height: 130px;
   margin: auto 5px 20px;
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 150ms ease-in-out;
@@ -93,7 +99,7 @@ h5 {
 }
 .search-box {
   position: absolute;
-  top: 2%;
+  top: 5%;
   right: 28%;
   background: #fff;
   height: 40px;
@@ -121,7 +127,7 @@ h5 {
 
 .location {
   position: absolute;
-  top: 2%;
+  top: 5%;
   right: 25%;
   height: 40px;
 }

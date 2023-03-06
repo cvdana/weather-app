@@ -22,139 +22,140 @@
   </head>
   <body>
     <div class="container">
-      <div class="info">
-        <h1 id="city"></h1>
-        <h2 id="current-time"></h2>
-        <h3>
-          <span id="actual-temperature"></span>
-          <small class="units">
-            <a href="#" id="celsius-link">ºC</a> |
-            <a href="#" id="fahrenheit-link">ºF</a>
-          </small>
-        </h3>
-      </div>
-      <div class="weather">
-        <div class="border border-4 rounded-top-circle box">
-          <img
-            src=""
-            alt="sun"
-            id="main-icon"
-            class="position-absolute top-10 start-50 translate-middle-x"
-          />
-          <h4 id="condition"></h4>
-          <h4 id="temperatures"></h4>
-          <h4 id="humidity"></h4>
-          <h4 id="wind"></h4>
-          <img class="dog" src="images/dog.gif" alt="sleeping dog" />
-        </div>
-        <hr />
-        <div class="row">
-          <div class="border border-3 rounded-pill col one">
-            <h5>
-              Thu, 26 <br /><img
-                src="images/cloudy.svg"
-                alt="cloud"
-                class="icon"
-              /><br />12º/2º
-            </h5>
+      <div class="wrap">
+        <div class="weather-app">
+          <div class="info">
+            <h1 id="city"></h1>
+            <h2 id="current-time"></h2>
+            <h3>
+              <span id="actual-temperature"></span>
+              <small class="units">
+                <a href="#" id="celsius-link">ºC</a> |
+                <a href="#" id="fahrenheit-link">ºF</a>
+              </small>
+            </h3>
           </div>
-          <div class="border border-3 rounded-pill col two">
-            <h5>
-              Fri, 26 <br /><img
-                src="images/sunny.svg"
+          <div class="weather">
+            <div class="border border-4 rounded-top-circle box">
+              <img
+                src=""
                 alt="sun"
-                class="icon"
-              /><br />
-              12º/2º
-            </h5>
-          </div>
-          <div class="border border-3 rounded-pill col three">
-            <h5>
-              Sat, 28 <br /><img
-                src="images/partly cloudy.svg"
-                alt="cloud with sun"
-                class="icon"
-              /><br />12º/2º
-            </h5>
-          </div>
-          <div class="border border-3 rounded-pill col four">
-            <h5>
-              Sun, 29 <br /><img
-                src="images/rainy.svg"
-                alt="cloud with rain and thunder"
-                class="icon"
-              /><br />11º/2º
-            </h5>
-          </div>
-          <div class="border border-3 rounded-pill col five">
-            <h5>
-              Mon, 30 <br /><img
-                src="images/snowy.svg"
-                alt="cloud"
-                class="icon"
-              /><br />15º/3º
-            </h5>
-          </div>
-          <div class="border border-3 rounded-pill col six">
-            <h5>
-              Tue, 31 <br /><img
-                src="images/sunny.svg"
-                alt="sun"
-                class="icon"
-              /><br />15º/4º
-            </h5>
-          </div>
-          <div class="border border-3 rounded-pill col seven">
-            <h5>
-              Wed, 1 <br /><img
-                src="images/sunny.svg"
-                alt="sun"
-                class="icon"
-              /><br />16º/5º
-            </h5>
-          </div>
-        </div>
-      </div>
-      <form action="submit" id="search-form">
-        <div
-          class="p-1 bg-light rounded rounded-pill shadow-sm mb-1 search-box"
-        >
-          <div class="input-group">
-            <input
-              type="search"
-              placeholder="Search City"
-              aria-describedby="button-addon1"
-              class="form-control border-0 bg-ligh search-bar"
-              id="search-city"
-            />
-            <div class="input-group-append">
-              <button
-                id="button-addon1"
-                type="submit"
-                class="btn btn-link text-primary search-button"
-              >
-                <img src="images/search.svg" alt="magnifying glass" />
-              </button>
+                id="main-icon"
+                class="position-absolute top-10 start-50 translate-middle-x"
+              />
+              <h4 id="condition"></h4>
+              <h4 id="temperatures"></h4>
+              <h4 id="humidity"></h4>
+              <h4 id="wind"></h4>
+              <img class="dog" src="images/dog.gif" alt="sleeping dog" />
+            </div>
+            <hr />
+            <div class="row">
+              <div class="border border-3 rounded-pill col one">
+                <h5>
+                  Thu, 26 <br /><img
+                    src="images/cloudy.svg"
+                    alt="cloud"
+                    class="icon"
+                  /><br />12º/2º
+                </h5>
+              </div>
+              <div class="border border-3 rounded-pill col two">
+                <h5>
+                  Fri, 26 <br /><img
+                    src="images/sunny.svg"
+                    alt="sun"
+                    class="icon"
+                  /><br />
+                  12º/2º
+                </h5>
+              </div>
+              <div class="border border-3 rounded-pill col three">
+                <h5>
+                  Sat, 28 <br /><img
+                    src="images/partly cloudy.svg"
+                    alt="cloud with sun"
+                    class="icon"
+                  /><br />12º/2º
+                </h5>
+              </div>
+              <div class="border border-3 rounded-pill col four">
+                <h5>
+                  Sun, 29 <br /><img
+                    src="images/rainy.svg"
+                    alt="cloud with rain and thunder"
+                    class="icon"
+                  /><br />11º/2º
+                </h5>
+              </div>
+              <div class="border border-3 rounded-pill col five">
+                <h5>
+                  Mon, 30 <br /><img
+                    src="images/snowy.svg"
+                    alt="cloud"
+                    class="icon"
+                  /><br />15º/3º
+                </h5>
+              </div>
+              <div class="border border-3 rounded-pill col six">
+                <h5>
+                  Tue, 31 <br /><img
+                    src="images/sunny.svg"
+                    alt="sun"
+                    class="icon"
+                  /><br />15º/4º
+                </h5>
+              </div>
+              <div class="border border-3 rounded-pill col seven">
+                <h5>
+                  Wed, 1 <br /><img
+                    src="images/sunny.svg"
+                    alt="sun"
+                    class="icon"
+                  /><br />16º/5º
+                </h5>
+              </div>
             </div>
           </div>
+          <form action="submit" id="search-form">
+            <div
+              class="p-1 bg-light rounded rounded-pill shadow-sm mb-1 search-box"
+            >
+              <div class="input-group">
+                <input
+                  type="search"
+                  placeholder="Search City"
+                  aria-describedby="button-addon1"
+                  class="form-control border-0 bg-ligh search-bar"
+                  id="search-city"
+                />
+                <div class="input-group-append">
+                  <button
+                    id="button-addon1"
+                    type="submit"
+                    class="btn btn-link text-primary search-button"
+                  >
+                    <img src="images/search.svg" alt="magnifying glass" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img
+              class="location col"
+              id="location-drop"
+              src="images/location.png"
+              alt="location pin"
+            />
+          </form>
         </div>
-        <img
-          class="location col"
-          id="location-drop"
-          src="images/location.png"
-          alt="location pin"
-        />
-      </form>
+        <footer>
+          <a href="https://github.com/cvdana/weather-app" target="_blank"
+            >Open-source code
+          </a>
+          by Dana Visnitchi
+        </footer>
+      </div>
     </div>
-    <footer>
-      <a
-        href="https://github.com/cvdana/weather-app"
-        class="source"
-        target="_blank"
-        >Open-source code
-      </a>
-      by Dana Visnitchi
-    </footer>
     <script src="src/javascript.js"></script>
   </body>
 </html>
