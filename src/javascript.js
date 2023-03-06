@@ -22,7 +22,6 @@ function displayCurrentDay(timestamp) {
   let hour = date.getHours();
   let minutes = String(date.getMinutes()).padStart(2, 0);
   let formattedDate = `${currentDay}, ${dateNumber} ${month} ${year}, ${hour}:${minutes}`;
-  console.log(date);
   return formattedDate;
 }
 
