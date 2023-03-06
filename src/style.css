@@ -24,12 +24,12 @@ small {
   top: -10px;
   font-size: 20px;
 }
-a {
+small a {
   text-decoration: none;
   color: #fff;
   transition: all 200ms ease-in;
 }
-a:hover {
+small a:hover {
   color: #0f5e9a;
 }
 
