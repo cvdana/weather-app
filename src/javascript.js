@@ -1,4 +1,6 @@
-function displayCurrentDay(date) {
+function displayCurrentDay(timestamp) {
+  let date = new Date(timestamp);
+  let dateNumber = date.getDate();
   let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
   let months = [
     `Jan`,
@@ -17,14 +19,12 @@ function displayCurrentDay(date) {
   let currentDay = days[date.getDay()];
   let month = months[date.getMonth()];
   let year = date.getFullYear();
-  let newDate = date.getDate();
   let hour = date.getHours();
   let minutes = String(date.getMinutes()).padStart(2, 0);
-  let formattedDate = `${currentDay}, ${newDate} ${month} ${year}, ${hour}:${minutes}`;
+  let formattedDate = `${currentDay}, ${dateNumber} ${month} ${year}, ${hour}:${minutes}`;
+  console.log(date);
   return formattedDate;
 }
-let todayInformation = document.querySelector(`#current-time`);
-todayInformation.innerHTML = displayCurrentDay(new Date());
 
 function showTemperature(response) {
   document.querySelector(`#actual-temperature`).innerHTML = Math.round(
@@ -42,6 +42,9 @@ function showTemperature(response) {
   document.querySelector(`#condition`).innerHTML =
     response.data.weather[0].description;
   document.querySelector(`#city`).innerHTML = response.data.name;
+  document.querySelector(`#current-time`).innerHTML = displayCurrentDay(
+    response.data.dt * 1000
+  );
 }
 function search(city) {
   let apiKey = `616903f8fae840aac9dcad7ca42409ed`;
