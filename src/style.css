@@ -24,6 +24,8 @@ h4 {
   font-family: "Lora", serif;
   color: #fff;
   text-align: center;
+  position: relative;
+  top: 105px;
 }
 h4#condition {
   text-transform: capitalize;
@@ -43,15 +45,13 @@ h4#temperatures {
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 }
 #main-icon {
-  position: relative;
-  top: 10px;
-  left: 80px;
   height: 150px;
+  width: 150px;
 }
 img.dog {
   position: relative;
   height: 155px;
-  bottom: 103px;
+  bottom: -45px;
   right: 50px;
 }
 .row .rounded-pill {

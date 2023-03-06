@@ -44,7 +44,15 @@ function showTemperature(response) {
   document.querySelector(`#current-time`).innerHTML = displayCurrentDay(
     response.data.dt * 1000
   );
-  console.log(response.data);
+  document
+    .querySelector(`#main-icon`)
+    .setAttribute(
+      `src`,
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector(`#main-icon`)
+    .setAttribute(`alt`, response.data.weather[0].description);
 }
 function search(city) {
   let apiKey = `616903f8fae840aac9dcad7ca42409ed`;
