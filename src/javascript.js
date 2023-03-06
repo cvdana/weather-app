@@ -26,9 +26,9 @@ function displayCurrentDay(timestamp) {
 }
 
 function showTemperature(response) {
-  document.querySelector(`#actual-temperature`).innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector(`#actual-temperature`).innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector(`#temperatures`).innerHTML = `${Math.round(
     response.data.main.temp_max
   )}º/${Math.round(response.data.main.temp_min)}º`;
@@ -84,4 +84,24 @@ function getLocation() {
 }
 let locationPin = document.querySelector(`#location-drop`);
 locationPin.addEventListener(`click`, getLocation);
+
+function transormUnits() {
+  function changeFahrenheit(event) {
+    event.preventDefault();
+    let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+    document.querySelector(`#actual-temperature`).innerHTML =
+      Math.round(fahrenheitTemp);
+  }
+  function changeCelsius(event) {
+    event.preventDefault();
+    let celsiusTemp = document.querySelector(`#actual-temperature`);
+    celsiusTemp.innerHTML = Math.round(celsiusTemperature);
+  }
+
+  let fahrenheit = document.querySelector(`#fahrenheit-link`);
+  fahrenheit.addEventListener(`click`, changeFahrenheit);
+  let celsius = document.querySelector(`#celsius-link`);
+  celsius.addEventListener(`click`, changeCelsius);
+}
+transormUnits();
 search(`Valencia`);
