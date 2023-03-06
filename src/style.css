@@ -13,6 +13,7 @@
     rgb(12, 133, 208) 24.5%,
     rgb(25, 128, 192) 66%
   );
+  border: solid 2px rgba(0, 0, 0, 0.5);
 }
 .info {
   font-family: "Lora", serif;
