@@ -44,6 +44,7 @@ function showTemperature(response) {
   document.querySelector(`#current-time`).innerHTML = displayCurrentDay(
     response.data.dt * 1000
   );
+  console.log(response.data);
 }
 function search(city) {
   let apiKey = `616903f8fae840aac9dcad7ca42409ed`;
