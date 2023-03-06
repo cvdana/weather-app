@@ -34,8 +34,8 @@ function showTemperature(response) {
   )}º/${Math.round(response.data.main.temp_min)}º`;
   document.querySelector(
     `#humidity`
-  ).innerHTML = `H ${response.data.main.humidity} %`;
-  document.querySelector(`#wind`).innerHTML = `W ${Math.round(
+  ).innerHTML = `Humidity: ${response.data.main.humidity} %`;
+  document.querySelector(`#wind`).innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} Km/h`;
   document.querySelector(`#condition`).innerHTML =

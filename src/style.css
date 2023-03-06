@@ -23,35 +23,14 @@ h3 {
 h4 {
   font-family: "Lora", serif;
   color: #fff;
+  text-align: center;
 }
 h4#condition {
-  position: relative;
-  text-align: center;
   text-transform: capitalize;
-  padding: 0;
   margin: 20px auto 0px;
-  top: 10px;
 }
 h4#temperatures {
-  position: relative;
-  text-align: center;
-  padding: 2px 0;
-  margin: 10px auto 0;
-  top: 5px;
-}
-h4#humidity {
-  position: relative;
-  top: 92px;
-  margin: 0;
-  padding: 5px 0;
-  text-align: center;
-}
-h4#wind {
-  position: relative;
-  top: 92px;
-  margin: 0;
-  padding: 5px 0;
-  text-align: center;
+  margin: 10px auto;
 }
 
 .box {
@@ -62,16 +41,18 @@ h4#wind {
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 90%;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
-  background-image: url("../images/sunny.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 150px;
+}
+#main-icon {
+  position: relative;
+  top: 10px;
+  left: 80px;
+  height: 150px;
 }
 img.dog {
   position: relative;
   height: 155px;
-  bottom: 4px;
-  right: 48px;
+  bottom: 103px;
+  right: 50px;
 }
 .row .rounded-pill {
   width: 40px;
