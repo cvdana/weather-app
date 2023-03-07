@@ -29,9 +29,9 @@ function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector(`#actual-temperature`).innerHTML =
     Math.round(celsiusTemperature);
-  document.querySelector(`#temperatures`).innerHTML = `${Math.round(
+  document.querySelector(`#temperatures`).innerHTML = `H ${Math.round(
     response.data.main.temp_max
-  )}º/${Math.round(response.data.main.temp_min)}º`;
+  )}º| L ${Math.round(response.data.main.temp_min)}º`;
   document.querySelector(
     `#humidity`
   ).innerHTML = `Humidity: ${response.data.main.humidity} %`;
