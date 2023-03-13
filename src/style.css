@@ -85,31 +85,7 @@ img.dog {
 .row .rounded-pill:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-ul {
-  border-left: solid 10px #333;
-  padding: 60px;
-}
 
-li {
-  position: relative;
-
-  &:before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    border: solid 10px #333;
-    background: white;
-    top: -5px;
-    left: -80px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 5px fade(black, 10%);
-  }
-
-  + li {
-    margin-top: 30px;
-  }
-}
 h5 {
   font-family: "Lora", serif;
   font-size: small;
