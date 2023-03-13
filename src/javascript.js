@@ -106,6 +106,42 @@ function transormUnits() {
 transormUnits();
 search(`Valencia`);
 
+function displayForecast() {
+  let forecastElemant = document.querySelector(`#weekly`);
+  let forecastHTML = `<div class="row">`;
+  let days = [
+    `Mon,26`,
+    `Tue,26`,
+    `Wed,26`,
+    `Thu,26`,
+    `Fri,26`,
+    `Sat,26`,
+    `Sun,26`,
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                    <div class="border border-3 rounded-pill col">
+                      <div class="weather-daily-date">
+                        ${day} <br /><img
+                          src="images/cloudy.svg"
+                          alt="cloud"
+                          class="icon"
+                        /><br />
+                        <span class="max-temperature-day">12º</span>/<span
+                          class="min-temperature-day"
+                          >2º</span
+                        >
+                      </div>
+                    </div>
+                    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElemant.innerHTML = forecastHTML;
+}
+displayForecast();
 const triggerTabList = document.querySelectorAll("#myTab button");
 triggerTabList.forEach((triggerEl) => {
   const tabTrigger = new bootstrap.Tab(triggerEl);

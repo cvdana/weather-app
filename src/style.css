@@ -71,18 +71,18 @@ img.dog {
   bottom: -45px;
   right: 50px;
 }
-.week {
+#weekly {
   box-sizing: content-box;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
-.week .rounded-pill {
+#weekly .rounded-pill {
   height: 130px;
   margin: 20px 5px;
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 150ms ease-in-out;
 }
-.week .rounded-pill:hover {
+#weekly .rounded-pill:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .square {
