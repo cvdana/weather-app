@@ -89,6 +89,14 @@ img.dog {
   width: 90%;
   margin: 20px auto;
 }
+.weather-daily-date {
+  font-family: "Lora", serif;
+  font-size: small;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-top: 11px;
+}
 
 h5 {
   font-family: "Lora", serif;
