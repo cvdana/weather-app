@@ -71,19 +71,23 @@ img.dog {
   bottom: -45px;
   right: 50px;
 }
-.row {
+.week {
   box-sizing: content-box;
   width: 100%;
   margin: 0 auto;
 }
-.row .rounded-pill {
+.week .rounded-pill {
   height: 130px;
   margin: 20px 5px;
   background-color: rgba(0, 0, 0, 0.2);
   transition: all 150ms ease-in-out;
 }
-.row .rounded-pill:hover {
+.week .rounded-pill:hover {
   background-color: rgba(0, 0, 0, 0.5);
+}
+.square {
+  width: 90%;
+  margin: 20px auto;
 }
 
 h5 {
