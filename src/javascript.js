@@ -24,6 +24,13 @@ function displayCurrentDay(timestamp) {
   let formattedDate = `${currentDay}, ${dateNumber} ${month} ${year}, ${hour}:${minutes}`;
   return formattedDate;
 }
+function getWeeklyForecast(coordinates) {
+  let apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
+  let units = `metric`;
+  let url = `https://api.shecodes.io/weather/v1/forecast`;
+  let apiUrl = `${url}?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+}
 function showTemperature(response) {
   celsiusTemperature = response.data.temperature.current;
   document.querySelector(`#actual-temperature`).innerHTML =
@@ -47,11 +54,12 @@ function showTemperature(response) {
     .querySelector(`#main-icon`)
     .setAttribute(
       `src`,
-      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon_url}.png`
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
     );
   document
     .querySelector(`#main-icon`)
     .setAttribute(`alt`, response.data.condition.description);
+  getWeeklyForecast(response.data.coordinates);
 }
 function search(city) {
   let apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
@@ -72,7 +80,7 @@ function retrieveLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
-  let url = `https://api.shecodes.io/weather/v1/forecast`;
+  let url = `https://api.shecodes.io/weather/v1/current`;
   let units = `metric`;
   let apiUrl = `${url}?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
@@ -102,7 +110,7 @@ function transormUnits() {
 }
 transormUnits();
 search(`Valencia`);
-function displayForecast() {
+function displayForecast(response) {
   let forecastElemant = document.querySelector(`#weekly`);
   let forecastHTML = `<div class="row">`;
   let days = [
