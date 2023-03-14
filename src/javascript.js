@@ -24,6 +24,14 @@ function displayCurrentDay(timestamp) {
   let formattedDate = `${currentDay}, ${dateNumber} ${month} ${year}, ${hour}:${minutes}`;
   return formattedDate;
 }
+function formatDate(time) {
+  let date = new Date(time * 1000);
+  let dateNumber = date.getDate();
+  let days = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+  let currentDay = days[date.getDay()];
+  let finalDate = `${currentDay}, ${dateNumber}`;
+  return finalDate;
+}
 function getWeeklyForecast(coordinates) {
   let apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
   let units = `metric`;
@@ -111,31 +119,28 @@ function transormUnits() {
 transormUnits();
 search(`Valencia`);
 function displayForecast(response) {
+  console.log(response.data);
+  let weeklyForecast = response.data.daily;
   let forecastElemant = document.querySelector(`#weekly`);
   let forecastHTML = `<div class="row">`;
-  let days = [
-    `Mon,26`,
-    `Tue,26`,
-    `Wed,26`,
-    `Thu,26`,
-    `Fri,26`,
-    `Sat,26`,
-    `Sun,26`,
-  ];
-  days.forEach(function (day) {
+  weeklyForecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
                     <div class="border border-3 rounded-pill col">
                       <div class="weather-daily-date">
-                        ${day} <br /><img
-                          src="images/cloudy.svg"
-                          alt="cloud"
+                        ${formatDate(forecastDay.time)} <br /><img
+                          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                            forecastDay.condition.icon
+                          }.png"
+                          alt="response.data.condition.description"
                           class="icon"
                         /><br />
-                        <span class="max-temperature-day">12º</span>/<span
+                        <span class="max-temperature-day">${Math.round(
+                          forecastDay.temperature.maximum
+                        )}º</span>/<span
                           class="min-temperature-day"
-                          >2º</span
+                          >${Math.round(forecastDay.temperature.minimum)}º</span
                         >
                       </div>
                     </div>
