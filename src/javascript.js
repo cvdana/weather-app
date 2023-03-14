@@ -24,48 +24,40 @@ function displayCurrentDay(timestamp) {
   let formattedDate = `${currentDay}, ${dateNumber} ${month} ${year}, ${hour}:${minutes}`;
   return formattedDate;
 }
-function getWeeklyForecast(coordinates) {
-  let apiKey = `616903f8fae840aac9dcad7ca42409ed`;
-  let units = `metric`;
-  let url = `https://api.openweathermap.org/data/3.0/onecall`;
-  let apiURL = `${url}?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
-  console.log(apiURL);
-}
 function showTemperature(response) {
-  celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.temperature.current;
   document.querySelector(`#actual-temperature`).innerHTML =
     Math.round(celsiusTemperature);
-  document.querySelector(`#temperatures`).innerHTML = `H ${Math.round(
-    response.data.main.temp_max
-  )}º| L ${Math.round(response.data.main.temp_min)}º`;
+  document.querySelector(`#temperatures`).innerHTML = `Feels like ${Math.round(
+    response.data.temperature.feels_like
+  )}º`;
   document.querySelector(
     `#humidity`
-  ).innerHTML = `Humidity: ${response.data.main.humidity} %`;
+  ).innerHTML = `Humidity: ${response.data.temperature.humidity} %`;
   document.querySelector(`#wind`).innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} Km/h`;
   document.querySelector(`#condition`).innerHTML =
-    response.data.weather[0].description;
-  document.querySelector(`#city`).innerHTML = response.data.name;
+    response.data.condition.description;
+  document.querySelector(`#city`).innerHTML = response.data.city;
   document.querySelector(`#current-time`).innerHTML = displayCurrentDay(
-    response.data.dt * 1000
+    response.data.time * 1000
   );
   document
     .querySelector(`#main-icon`)
     .setAttribute(
       `src`,
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon_url}.png`
     );
   document
     .querySelector(`#main-icon`)
-    .setAttribute(`alt`, response.data.weather[0].description);
-  getWeeklyForecast(response.data.coord);
+    .setAttribute(`alt`, response.data.condition.description);
 }
 function search(city) {
-  let apiKey = `616903f8fae840aac9dcad7ca42409ed`;
-  let url = `https://api.openweathermap.org/data/2.5/weather`;
+  let apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
+  let url = `https://api.shecodes.io/weather/v1/current`;
   let units = `metric`;
-  let apiUrl = `${url}?q=${city}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `${url}?query=${city}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
 function handleSubmit(event) {
@@ -76,14 +68,13 @@ function handleSubmit(event) {
 
 let searchForm = document.querySelector(`#search-form`);
 searchForm.addEventListener(`submit`, handleSubmit);
-
 function retrieveLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let apiKey = `616903f8fae840aac9dcad7ca42409ed`;
-  let url = `https://api.openweathermap.org/data/2.5/weather`;
+  let apiKey = `94413t4dbc141o4dc71ce00caf84f31e`;
+  let url = `https://api.shecodes.io/weather/v1/forecast`;
   let units = `metric`;
-  let apiUrl = `${url}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `${url}?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
 }
 function getLocation() {
@@ -91,7 +82,6 @@ function getLocation() {
 }
 let locationPin = document.querySelector(`#location-drop`);
 locationPin.addEventListener(`click`, getLocation);
-
 function transormUnits() {
   function changeFahrenheit(event) {
     event.preventDefault();
@@ -112,7 +102,6 @@ function transormUnits() {
 }
 transormUnits();
 search(`Valencia`);
-
 function displayForecast() {
   let forecastElemant = document.querySelector(`#weekly`);
   let forecastHTML = `<div class="row">`;
