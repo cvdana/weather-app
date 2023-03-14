@@ -24,7 +24,13 @@ function displayCurrentDay(timestamp) {
   let formattedDate = `${currentDay}, ${dateNumber} ${month} ${year}, ${hour}:${minutes}`;
   return formattedDate;
 }
-
+function getWeeklyForecast(coordinates) {
+  let apiKey = `616903f8fae840aac9dcad7ca42409ed`;
+  let units = `metric`;
+  let url = `https://api.openweathermap.org/data/3.0/onecall`;
+  let apiURL = `${url}?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  console.log(apiURL);
+}
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector(`#actual-temperature`).innerHTML =
@@ -53,6 +59,7 @@ function showTemperature(response) {
   document
     .querySelector(`#main-icon`)
     .setAttribute(`alt`, response.data.weather[0].description);
+  getWeeklyForecast(response.data.coord);
 }
 function search(city) {
   let apiKey = `616903f8fae840aac9dcad7ca42409ed`;
