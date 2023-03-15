@@ -18,14 +18,14 @@ h2 {
 }
 h3 {
   font-family: "Lora", serif;
-  font-size: 80px;
+  font-size: 90px;
   text-align: center;
   color: #fff;
   padding: 0;
 }
 small {
   position: relative;
-  top: -39px;
+  top: -50px;
   right: 18px;
   font-size: 25px;
 }
@@ -46,8 +46,8 @@ h4 {
 h4#condition {
   text-transform: capitalize;
 }
+
 h4#temperatures {
-  margin-top: 10px;
 }
 
 #main-icon {
