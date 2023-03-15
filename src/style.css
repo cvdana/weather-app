@@ -4,29 +4,30 @@
   margin: 20px auto;
 }
 .weather-app {
-  background: radial-gradient(
-    circle at -8.9% 51.2%,
-    rgb(255, 124, 0) 0%,
-    rgb(255, 124, 0) 15.9%,
-    rgb(255, 163, 77) 15.9%,
-    rgb(255, 163, 77) 24.4%,
-    rgb(12, 133, 208) 24.5%,
-    rgb(25, 128, 192) 66%
-  );
+  background-color: #d3c2c2;
   border: solid 2px rgba(0, 0, 0, 0.5);
 }
+
 .info {
   font-family: "Lora", serif;
   color: #fff;
   padding: 10px 15px;
 }
+h2 {
+  font-size: 20px;
+}
 h3 {
-  font-size: 33px;
+  font-family: "Lora", serif;
+  font-size: 80px;
+  text-align: center;
+  color: #fff;
+  padding: 0;
 }
 small {
   position: relative;
-  top: -10px;
-  font-size: 20px;
+  top: -39px;
+  right: 18px;
+  font-size: 25px;
 }
 small a {
   text-decoration: none;
@@ -41,35 +42,19 @@ h4 {
   font-family: "Lora", serif;
   color: #fff;
   text-align: center;
-  position: relative;
-  top: 105px;
 }
 h4#condition {
   text-transform: capitalize;
-  margin: 20px auto 0px;
 }
 h4#temperatures {
-  margin: 10px auto;
+  margin-top: 10px;
 }
 
-.box {
-  width: 310px;
-  height: 330px;
-  box-sizing: content-box;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 90%;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
-}
 #main-icon {
-  height: 150px;
-  width: 150px;
-}
-img.dog {
-  position: relative;
-  height: 155px;
-  bottom: -45px;
-  right: 50px;
+  height: 140px;
+  width: 140px;
+  margin-top: 20px;
+  padding: 0;
 }
 #weekly {
   box-sizing: content-box;
@@ -84,11 +69,9 @@ img.dog {
 }
 #weekly .rounded-pill:hover {
   background-color: rgba(0, 0, 0, 0.5);
+  zoom: 110%;
 }
-.square {
-  width: 90%;
-  margin: 20px auto;
-}
+
 .weather-daily-date {
   font-family: "Lora", serif;
   font-size: small;
@@ -98,14 +81,6 @@ img.dog {
   margin-top: 11px;
 }
 
-h5 {
-  font-family: "Lora", serif;
-  font-size: small;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  margin-top: 15px;
-}
 .icon {
   width: 40px;
   height: 40px;

@@ -119,7 +119,6 @@ function transormUnits() {
 transormUnits();
 search(`Valencia`);
 function displayForecast(response) {
-  console.log(response.data);
   let weeklyForecast = response.data.daily;
   let forecastElemant = document.querySelector(`#weekly`);
   let forecastHTML = `<div class="row">`;
@@ -127,7 +126,7 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       `
-                    <div class="border border-3 rounded-pill col">
+             <div class="border border-3 rounded-pill col">
                       <div class="weather-daily-date">
                         ${formatDate(forecastDay.time)} <br /><img
                           src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
@@ -146,7 +145,6 @@ function displayForecast(response) {
                     </div>
                     `;
   });
-
   forecastHTML = forecastHTML + `</div>`;
   forecastElemant.innerHTML = forecastHTML;
 }
