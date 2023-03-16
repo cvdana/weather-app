@@ -7,6 +7,11 @@
   background-color: #d3c2c2;
   border: solid 2px rgba(0, 0, 0, 0.5);
 }
+.box {
+  max-width: 400px;
+  max-height: 327px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 .info {
   font-family: "Lora", serif;
@@ -56,6 +61,7 @@ h4#temperatures {
   margin-top: 20px;
   padding: 0;
 }
+
 #weekly {
   box-sizing: content-box;
   width: 90%;
