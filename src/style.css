@@ -12,42 +12,44 @@
   max-height: 327px;
   background-color: rgba(0, 0, 0, 0.2);
 }
-
-.info {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Lora", serif;
   color: #fff;
-  padding: 10px 15px;
 }
+.info {
+  padding: 12px 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+
 h2 {
   font-size: 20px;
 }
 h3 {
-  font-family: "Lora", serif;
   font-size: 90px;
-  text-align: center;
-  color: #fff;
   padding: 0;
+  position: relative;
+  top: 10px;
+  right: 100px;
 }
-small {
+h3 small {
   position: relative;
   top: -50px;
   right: 18px;
   font-size: 25px;
 }
-small a {
+h3 small a {
   text-decoration: none;
   color: #fff;
   transition: all 200ms ease-in;
 }
-small a:hover {
+h3 small a:hover {
   color: #0f5e9a;
 }
 
-h4 {
-  font-family: "Lora", serif;
-  color: #fff;
-  text-align: center;
-}
 h4#condition {
   text-transform: capitalize;
 }
@@ -93,14 +95,12 @@ h4#temperatures {
   margin: 10px auto;
 }
 .search-box {
-  position: absolute;
-  top: 5%;
-  right: 28%;
+  position: relative;
+  bottom: 43em;
+  margin: 0 auto;
   background: #fff;
   height: 40px;
-  width: 280px;
-  border-radius: 40px;
-  padding: 10px;
+  width: 460px;
 }
 .search-bar {
   height: fit-content;
