@@ -30,8 +30,9 @@
           </div>
           <div class="weather">
             <div class="border border-3 rounded-5 container weather box">
-              <img src="" alt="sun" id="main-icon" />
-
+              <div class="border border-3 border-top-0 rounded-circle frame">
+                <img src="" alt="sun" id="main-icon" />
+              </div>
               <h3>
                 <span id="actual-temperature"></span>
                 <small class="units">
@@ -39,61 +40,13 @@
                   <a href="#" id="fahrenheit-link">ºF</a>
                 </small>
               </h3>
-
               <h4 id="condition"></h4>
               <h4 id="temperatures"></h4>
               <h4 id="humidity"></h4>
               <h4 id="wind"></h4>
             </div>
-
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active"
-                  id="home-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#home-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="home-tab-pane"
-                  aria-selected="true"
-                >
-                  Weekly
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="profile-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#profile-tab-pane"
-                  type="button"
-                  role="tab"
-                  aria-controls="profile-tab-pane"
-                  aria-selected="false"
-                >
-                  Hourly
-                </button>
-              </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-              <div
-                class="tab-pane fade show active"
-                id="home-tab-pane"
-                role="tabpanel"
-                aria-labelledby="home-tab"
-                tabindex="0"
-              >
-                <div class="forecast" id="weekly"></div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="profile-tab-pane"
-                role="tabpanel"
-                aria-labelledby="profile-tab"
-                tabindex="0"
-              ></div>
-            </div>
+            <hr />
+            <div class="forecast" id="weekly"></div>
           </div>
           <form action="submit" id="search-form">
             <div
