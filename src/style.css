@@ -130,3 +130,15 @@ h4.day-forecast {
   right: 25%;
   height: 40px;
 }
+.thermometer {
+  height: 52px;
+  width: 68px;
+}
+.humidity-icon {
+  height: 52px;
+  width: 68px;
+}
+.wind-icon {
+  height: 52px;
+  width: 68px;
+}
