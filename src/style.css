@@ -44,17 +44,9 @@ h3 {
 
 h3 small {
   position: relative;
-  top: -50px;
+  top: -45px;
   right: 18px;
   font-size: 25px;
-}
-h3 small a {
-  text-decoration: none;
-  color: #fff;
-  transition: all 200ms ease-in;
-}
-h3 small a:hover {
-  color: #0f5e9a;
 }
 
 h4#condition {
