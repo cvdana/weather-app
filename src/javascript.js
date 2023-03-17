@@ -43,13 +43,13 @@ function showTemperature(response) {
   celsiusTemperature = response.data.temperature.current;
   document.querySelector(`#actual-temperature`).innerHTML =
     Math.round(celsiusTemperature);
-  document.querySelector(`#temperatures`).innerHTML = `Feels like ${Math.round(
+  document.querySelector(`#temperatures`).innerHTML = `Feels like: ${Math.round(
     response.data.temperature.feels_like
   )}º`;
   document.querySelector(
     `#humidity`
   ).innerHTML = `Humidity: ${response.data.temperature.humidity} %`;
-  document.querySelector(`#wind`).innerHTML = `Wind: ${Math.round(
+  document.querySelector(`#wind`).innerHTML = `Wind: <br/>${Math.round(
     response.data.wind.speed
   )} Km/h`;
   document.querySelector(`#condition`).innerHTML =

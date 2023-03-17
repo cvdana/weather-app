@@ -5,6 +5,7 @@
 }
 .weather-app {
   background-color: #d3c2c2;
+  border-radius: 5%;
   border: solid 2px rgba(0, 0, 0, 0.5);
 }
 .box {
@@ -73,10 +74,11 @@ h4.day-forecast {
 }
 
 #main-icon {
+  display: inherit;
   height: 140px;
   width: 140px;
-  margin-top: 20px;
-  padding: 0;
+  margin: 0 auto;
+  padding-top: 15px;
 }
 
 #weekly {
