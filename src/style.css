@@ -61,10 +61,12 @@ h4.day-forecast {
 }
 .extra-information {
   position: relative;
-  top: -100px;
+  top: -130px;
   text-align: center;
 }
-
+.extra-information img {
+  margin: 0 auto;
+}
 #main-icon {
   display: inherit;
   height: 140px;
