@@ -1,3 +1,6 @@
+body {
+  background-color: #ffccad;
+}
 .wrap {
   max-width: 800px;
   max-height: 500px;
@@ -8,7 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5%;
-  border: solid 2px rgba(0, 0, 0, 0.5);
+  border: solid 2px rgba(255, 255, 255, 0.5);
 }
 .box {
   max-width: 400px;
