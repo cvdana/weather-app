@@ -106,12 +106,9 @@ h4.day-forecast {
   margin: 10px auto;
 }
 .search-box {
-  position: relative;
-  top: -44em;
   margin: 0 20px;
   background: #fff;
   height: 40px;
-  width: 660px;
 }
 .search-bar {
   height: fit-content;
@@ -124,23 +121,19 @@ h4.day-forecast {
   font-size: 16px;
   line-height: 20px;
 }
-
 .search-button img {
   width: 25px;
   position: relative;
   bottom: 5px;
 }
 .location {
-  position: relative;
+  display: block;
   height: 35px;
-  top: -46.7em;
-  left: 684px;
+  padding: 0;
+  margin: 0 auto;
 }
 #refresh {
-  position: relative;
   height: 35px;
-  top: -46.7em;
-  left: 688px;
   transition: all 100ms ease;
 }
 #refresh:hover {
