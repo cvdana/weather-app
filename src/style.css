@@ -105,6 +105,14 @@ h4.day-forecast {
   height: 40px;
   margin: 10px auto;
 }
+.seek-block {
+  position: relative;
+  top: -44rem;
+}
+.seek-block .col,
+.seek-block .col-9 {
+  padding: 0;
+}
 .search-box {
   margin: 0 20px;
   background: #fff;
@@ -129,11 +137,12 @@ h4.day-forecast {
 .location {
   display: block;
   height: 35px;
-  padding: 0;
-  margin: 0 auto;
+  margin-left: 65px;
 }
 #refresh {
+  display: block;
   height: 35px;
+  text-align: left;
   transition: all 100ms ease;
 }
 #refresh:hover {
